@@ -14,77 +14,58 @@ export const routes: Routes = [
     data: {
       title: 'Home'
     },
-    canActivate: [AuthGuard],
     children: [
-      {
-        path: 'dashboard',
-        loadChildren: () => import('./views/dashboard/routes').then((m) => m.routes),
-        canActivate: [AuthGuard]
-      },
-      {
-        path: 'theme',
-        loadChildren: () => import('./views/theme/routes').then((m) => m.routes),
-        canActivate: [AuthGuard]
-      },
-      {
-        path: 'base',
-        loadChildren: () => import('./views/base/routes').then((m) => m.routes),
-        canActivate: [AuthGuard]
-      },
-      {
-        path: 'buttons',
-        loadChildren: () => import('./views/buttons/routes').then((m) => m.routes),
-        canActivate: [AuthGuard]
-      },
-      {
-        path: 'forms',
-        loadChildren: () => import('./views/forms/routes').then((m) => m.routes),
-        canActivate: [AuthGuard]
-      },
-      {
-        path: 'icons',
-        loadChildren: () => import('./views/icons/routes').then((m) => m.routes),
-        canActivate: [AuthGuard]
-      },
-      {
-        path: 'notifications',
-        loadChildren: () => import('./views/notifications/routes').then((m) => m.routes),
-        canActivate: [AuthGuard]
-      },
-      {
-        path: 'widgets',
-        loadChildren: () => import('./views/widgets/routes').then((m) => m.routes),
-        canActivate: [AuthGuard]
-      },
-      {
-        path: 'charts',
-        loadChildren: () => import('./views/charts/routes').then((m) => m.routes),
-        canActivate: [AuthGuard]
-      },
       {
         path: 'pages',
         loadChildren: () => import('./views/pages/routes').then((m) => m.routes),
-        canActivate: [AuthGuard]
+        
       },
       {
         path: 'products-admin',
         loadComponent: () => import('./views/pages/products-admin/products-admin.component').then((m) => m.ProductsAdminComponent),
-        canActivate: [AuthGuard]
+        
       },
       {
         path: 'profile',
         loadComponent: () => import('./views/pages/profile/profile.component').then((m) => m.ProfileComponent),
-        canActivate: [AuthGuard]
+        
       },
       {
         path: 'shop-products',
         loadComponent: () => import('./views/pages/products-to-shop/products-to-shop.component').then((m) => m.ProductsToShopComponent),
-        canActivate: [AuthGuard]
+        
       },
       {
         path: 'orders',
-        loadComponent: () => import('./views/pages/orders/orders.component').then((m) => m.OrdersComponent),
-        canActivate: [AuthGuard]
+        loadComponent: () => import('./views/pages/orders/orders.component').then((m) => m.OrdersComponent)
+      },
+      {
+        path: 'pacientes-register',
+        loadComponent: () => import('./views/pages/pacientes-register/pacientes-register.component').then((m) => m.PacientesRegisterComponent)
+      },
+      {
+        path: 'medicos-register',
+        loadComponent: () => import('./views/pages/medicos-register/medicos-register.component').then((m) => m.MedicosRegisterComponent)
+      },
+      {
+        path: 'especialidades-register',
+        loadComponent: () => import('./views/pages/especialidades-register/especialidades-register.component').then((m) => m.EspecialidadesRegisterComponent)
+      },
+      {
+        path: 'roles-register',
+        loadComponent: () => import('./views/pages/roles-register/roles-register.component').then((m) => m.RolesRegisterComponent)
+      },
+      {
+        path: 'citas-create',
+        loadComponent: () => import('./views/pages/citas-create/citas-create.component').then((m) => m.CitasCreateComponent)
+      },
+      {
+        path: 'turnos-create',
+        loadComponent: () => import('./views/pages/turnos-create/turnos-create.component').then((m) => m.TurnosCreateComponent)
+      },
+      {
+        path: 'user-history',
+        loadComponent: () => import('./views/pages/user-history/user-history.component').then((m) => m.UserHistoryComponent)
       }
     ]
   },
@@ -102,5 +83,5 @@ export const routes: Routes = [
       title: 'Register Page'
     }
   },
-  { path: '**', redirectTo: 'dashboard' }
+  { path: '**', redirectTo: 'citas-create' }
 ];

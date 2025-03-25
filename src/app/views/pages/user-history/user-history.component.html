@@ -1,0 +1,7 @@
+<app-historico-usuario-form></app-historico-usuario-form>
+@if (isLoading) {
+    <app-spinner></app-spinner>
+}
+@if (displayTable && !isLoading) {
+    <app-historico-usuario-table [userHistory]="userHistory"></app-historico-usuario-table>
+}

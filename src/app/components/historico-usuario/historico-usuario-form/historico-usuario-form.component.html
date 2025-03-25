@@ -1,0 +1,23 @@
+<div class="row">
+    <div class="col-3">
+        <div class="text-left p-0 col-8 title2 my-auto"><b>Usuario*</b></div>
+        <div class="p-0 col-11">
+            <select class="form-select rounded py-1 w-100" #usuario="ngModel" name="usuario" placeholder="select" required
+                [(ngModel)]="selectedPaciente">
+                @for (paciente of pacientes; track $index) {
+                    <option [ngValue]="paciente" >{{paciente.nombre}}</option>
+                }
+            </select>
+            <p class="invalid-feedback d-block p-0 m-0"
+                [ngClass]="{'d-block': usuario.invalid && (usuario.dirty || usuario.touched)}">
+                Este campo es requerido
+            </p>
+        </div>
+    </div>
+    <div class="col-2 d-flex align-items-start pt-4">
+        <button class="btn btn-primary w-100 form-btn" 
+            [disabled]="!selectedPaciente.idUsuario" (click)="buscarHistorial()">
+            Buscar historial
+        </button>
+    </div>          
+</div>

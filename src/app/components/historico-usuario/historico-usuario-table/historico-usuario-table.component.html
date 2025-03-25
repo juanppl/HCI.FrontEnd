@@ -1,0 +1,28 @@
+<table class="table table-striped my-4">
+    <thead>
+        <tr>
+            <th scope="col" class="text-center align-middle">Paciente</th>
+            <th scope="col" class="text-center align-middle">Medico</th>
+            <th scope="col" class="text-center align-middle">Especialidad</th>
+            <th scope="col" class="text-center align-middle">Fecha</th>
+            <th scope="col" class="text-center align-middle">Estado</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (userHistory.length == 0) {
+            <td colspan="8" class="text-center py-3 fw-bold fs-4">No se encontraron citas</td>
+        }
+
+        @if (userHistory.length > 0) {
+            @for (history of userHistory; track $index) {
+                <tr>
+                    <td class="text-center align-middle">{{ history.paciente.nombre }} {{ history.paciente.apellido }}</td>
+                    <td class="text-center align-middle">{{ history.medicoEspecialidad.usuario.nombre }} {{ history.medicoEspecialidad.usuario.apellido }}</td>
+                    <td class="text-center align-middle">{{ history.medicoEspecialidad.especialidad.nombreEspecialidad }}</td>
+                    <td class="text-center align-middle">{{ history.fechaCitaS }}</td>
+                    <td class="text-center align-middle">{{ history.estado }}</td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>

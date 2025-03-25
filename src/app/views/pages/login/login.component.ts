@@ -48,7 +48,7 @@ export class LoginComponent {
       next: (data) => {
         if (data) {
           this.authService.setLoggedInUser(data);
-          this.router.navigateByUrl(`/dashboard`);
+          this.router.navigateByUrl(`/citas-create`);
         }
       },
       error: (error) => {

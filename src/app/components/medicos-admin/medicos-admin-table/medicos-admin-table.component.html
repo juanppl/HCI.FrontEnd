@@ -1,0 +1,45 @@
+<table class="table table-striped my-4">
+    <thead>
+        <tr>
+            <th scope="col" class="text-center align-middle">Nombre</th>
+            <th scope="col" class="text-center align-middle">Apellido</th>
+            <th scope="col" class="text-center align-middle">Email</th>
+            <th scope="col" class="text-center align-middle">Telefono</th>
+            <th scope="col" class="text-center align-middle">Dirección</th>
+            <th scope="col" class="text-center align-middle">Especialidad</th>
+            <th scope="col" class="text-center align-middle">Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (medicos.length == 0) {
+            <td colspan="8" class="text-center py-3 fw-bold fs-4">No se encontraron medicos</td>
+        }
+
+        @if (medicos.length > 0) {
+            @for (medico of medicos; track $index) {
+                <tr>
+                    <td class="text-center align-middle">{{ medico.nombre }}</td>
+                    <td class="text-center align-middle">{{ medico.apellido }}</td>
+                    <td class="text-center align-middle">{{ medico.email }}</td>
+                    <td class="text-center align-middle">{{ medico.telefono }}</td>
+                    <td class="text-center align-middle">{{ medico.direccion }}</td>
+                    <td class="text-center align-middle">{{ medico.medicoEspecialidad[0].especialidad.nombreEspecialidad }}</td>
+                    <td class="text-center align-middle">
+                        <div class="d-flex justify-content-center align-items-center gap-1">
+                            <button type="button" class="btn btn-primary" (click)="editMedico(medico)" >
+                                <i class="fa-regular fa-pen-to-square"></i>
+                            </button>
+                            <!-- <button type="button" class="btn btn-danger" (click)="deleteProduct(product.id)" >
+                                <i class="fa-solid fa-trash white"></i>          
+                            </button> -->
+                            <!-- <button type="button" class="btn btn-secondary" 
+                                (click)="addProductToCart(product)" [disabled]="productExistsOnCart(product)" >
+                                <i class="fa-solid fa-cart-plus"></i>          
+                            </button> -->
+                        </div>
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>

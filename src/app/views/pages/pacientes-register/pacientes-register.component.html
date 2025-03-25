@@ -1,0 +1,27 @@
+<div class="container">
+
+    @if (isLoading) {
+        <div class="d-flex justify-content-center py-5">
+            <app-spinner></app-spinner>
+        </div>
+    }
+
+    @if (!isLoading) {
+
+        @if (isTableShown) {
+            <div class="mt-4 d-flex justify-content-end align-items-center">
+                <button type="button" class="btn btn-primary" (click)="addPaciente()">
+                    AGREGAR PACIENTE
+                </button>
+            </div>
+            <app-pacientes-admin-table [pacientes]="pacientes"></app-pacientes-admin-table>
+        }
+    
+        @if (!isTableShown) {
+            <app-pacientes-admin-form></app-pacientes-admin-form>
+        }
+    }
+
+
+
+</div>

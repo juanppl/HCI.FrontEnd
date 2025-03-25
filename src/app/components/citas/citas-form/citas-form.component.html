@@ -1,0 +1,83 @@
+<div class="row">
+    <div class="col-3">
+        <div class="text-left p-0 col-8 title2 my-auto"><b>Usuario*</b></div>
+        <div class="p-0 col-11">
+            <select class="form-select rounded py-1 w-100" #usuario="ngModel" name="usuario" placeholder="select" required
+                [(ngModel)]="selectedPaciente">
+                @for (paciente of pacientes; track $index) {
+                    <option [ngValue]="paciente" >{{paciente.nombre}}</option>
+                }
+            </select>
+            <p class="invalid-feedback d-block p-0 m-0"
+                [ngClass]="{'d-block': usuario.invalid && (usuario.dirty || usuario.touched)}">
+                Este campo es requerido
+            </p>
+        </div>
+        @if (selectedPaciente && selectedPaciente.idUsuario) {
+            <div class="row pt-2">
+                <div class="col-12">
+                    <div class="text-left p-0 col-8 title2 my-auto"><b>Nombre Paciente*</b></div>
+                    <p>{{selectedPaciente.nombre}}</p>
+                    <div class="text-left p-0 col-8 title2 my-auto"><b>Apellido Paciente*</b></div>
+                    <p>{{selectedPaciente.apellido}}</p>
+                    <div class="text-left p-0 col-8 title2 my-auto"><b>Email Paciente*</b></div>
+                    <p>{{selectedPaciente.email}}</p>
+                    <div class="text-left p-0 col-8 title2 my-auto"><b>Dirección Paciente*</b></div>
+                    <p>{{selectedPaciente.direccion}}</p>
+                </div>
+            </div>
+        }
+    </div>
+    <div class="col-3">
+        <div class="text-left p-0 col-8 title2 my-auto"><b>Medico*</b></div>
+        <div class="p-0 col-11">
+            <select class="form-select rounded py-1 w-100" #medico="ngModel" name="medico" placeholder="select" required
+                [(ngModel)]="selectedMedico">
+                @for (medico of medicos; track $index) {
+                    <option [ngValue]="medico" >{{medico.nombre}}</option>
+                }
+            </select>
+            <p class="invalid-feedback d-block p-0 m-0"
+                [ngClass]="{'d-block': medico.invalid && (medico.dirty || medico.touched)}">
+                Este campo es requerido
+            </p>
+        </div>
+        @if (selectedMedico && selectedMedico.idUsuario) {
+            <div class="row pt-2">
+                <div class="col-12">
+                    <div class="text-left p-0 col-8 title2 my-auto"><b>Nombre Medico*</b></div>
+                    <p>{{selectedMedico.nombre}}</p>
+                    <div class="text-left p-0 col-8 title2 my-auto"><b>Apellido Medico*</b></div>
+                    <p>{{selectedMedico.apellido}}</p>
+                    <div class="text-left p-0 col-8 title2 my-auto"><b>Email Medico*</b></div>
+                    <p>{{selectedMedico.email}}</p>
+                    <div class="text-left p-0 col-8 title2 my-auto"><b>Especialidad Medico*</b></div>
+                    <p>{{selectedMedico.medicoEspecialidad[0].especialidad.nombreEspecialidad}}</p>
+                </div>
+            </div>
+        }
+    </div>
+    <div class="col-3">
+        <div class="text-left p-0 col-8 title2 my-auto"><b>Fecha de cita*</b></div>
+        <div class="p-0 col-11">
+            <div class="d-flex">
+                <input class="w-100 form-control mr-2" type="date" [min]="currentDate"
+                    [(ngModel)]="citaDate" (change)="assignExpireDate($event)" 
+                    ngModel #expireDate="ngModel" name="expireDate" required />
+                <input class="w-100 form-control mr-2" type="time" [min]="currentDate"
+                    [(ngModel)]="citaTime" (change)="assignExpireTime($event)" 
+                    ngModel #citaTime="ngModel" name="citaTime" required />
+            </div>
+            <p class="invalid-feedback d-block p-0 m-0"
+                [ngClass]="{'d-block': expireDate.invalid && (expireDate.dirty || expireDate.touched)}">
+                Este campo es requerido
+            </p>
+        </div>
+    </div>
+    <div class="col-2 d-flex align-items-start pt-4">
+        <button class="btn btn-primary w-100 form-btn" 
+            [disabled]="!selectedPaciente.idUsuario || !selectedMedico.idUsuario || !citaDate" (click)="crearCita()">
+            Crear cita
+        </button>
+    </div>          
+</div>

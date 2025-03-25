@@ -1,0 +1,37 @@
+<table class="table table-striped my-4">
+    <thead>
+        <tr>
+            <th scope="col" class="text-center align-middle">Nombre</th>
+            <th scope="col" class="text-center align-middle">Descripción</th>
+            <th scope="col" class="text-center align-middle">Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (especialidades.length == 0) {
+            <td colspan="8" class="text-center py-3 fw-bold fs-4">No se encontraron especialidades</td>
+        }
+
+        @if (especialidades.length > 0) {
+            @for (especialidad of especialidades; track $index) {
+                <tr>
+                    <td class="text-center align-middle">{{ especialidad.nombreEspecialidad }}</td>
+                    <td class="text-center align-middle">{{ especialidad.descripcion }}</td>
+                    <td class="text-center align-middle">
+                        <div class="d-flex justify-content-center align-items-center gap-1">
+                            <button type="button" class="btn btn-primary" (click)="editEspecialidad(especialidad)" >
+                                <i class="fa-regular fa-pen-to-square"></i>
+                            </button>
+                            <!-- <button type="button" class="btn btn-danger" (click)="deleteProduct(product.id)" >
+                                <i class="fa-solid fa-trash white"></i>          
+                            </button> -->
+                            <!-- <button type="button" class="btn btn-secondary" 
+                                (click)="addProductToCart(product)" [disabled]="productExistsOnCart(product)" >
+                                <i class="fa-solid fa-cart-plus"></i>          
+                            </button> -->
+                        </div>
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>

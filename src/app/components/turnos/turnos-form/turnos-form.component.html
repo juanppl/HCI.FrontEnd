@@ -1,0 +1,71 @@
+<div class="row">
+    <div class="col-3">
+        <div class="text-left p-0 col-4 title2 my-auto"><b>Medico*</b></div>
+        <div class="p-0 col-11">
+            <select class="form-select rounded py-1 w-100" #usuario="ngModel" name="usuario" placeholder="select" required
+                [(ngModel)]="selectedMedico">
+                @for (medico of medicos; track $index) {
+                    <option [ngValue]="medico" >{{medico.nombre}}</option>
+                }
+            </select>
+            <p class="invalid-feedback d-block p-0 m-0"
+                [ngClass]="{'d-block': usuario.invalid && (usuario.dirty || usuario.touched)}">
+                Este campo es requerido
+            </p>
+        </div>
+        @if (selectedMedico && selectedMedico.idUsuario) {
+            <div class="row pt-2">
+                <div class="col-12">
+                    <div class="text-left p-0 col-8 title2 my-auto"><b>Nombre Medico*</b></div>
+                    <p>{{selectedMedico.nombre}}</p>
+                    <div class="text-left p-0 col-8 title2 my-auto"><b>Apellido Medico*</b></div>
+                    <p>{{selectedMedico.apellido}}</p>
+                    <div class="text-left p-0 col-8 title2 my-auto"><b>Email Medico*</b></div>
+                    <p>{{selectedMedico.email}}</p>
+                    <div class="text-left p-0 col-8 title2 my-auto"><b>Especialidad Medico*</b></div>
+                    <p>{{selectedMedico.medicoEspecialidad[0].especialidad.nombreEspecialidad}}</p>
+                </div>
+            </div>
+        }
+    </div>
+    <div class="col-3">
+        <div class="text-left p-0 col-8 title2 my-auto"><b>Fecha de inicio*</b></div>
+        <div class="p-0 col-8">
+            <div class="d-flex">
+                <input class="w-100 form-control mr-2" type="date" [(ngModel)]="turnoInicioDate" 
+                    (change)="assignInicioDate($event)" 
+                    ngModel #turnoInicioDate="ngModel" name="turnoInicioDate" required />
+                <input class="w-100 form-control mr-2" type="time" [min]="currentDate"
+                    [(ngModel)]="turnoInicioTime" (change)="assignInicioTime($event)" 
+                    ngModel #turnoInicioTime="ngModel" name="turnoInicioTime" required />
+            </div>
+            <p class="invalid-feedback d-block p-0 m-0"
+                [ngClass]="{'d-block': turnoInicioDate.invalid && (turnoInicioDate.dirty || turnoInicioDate.touched)}">
+                Este campo es requerido
+            </p>
+        </div>
+    </div>
+    <div class="col-3">
+        <div class="text-left p-0 col-8 title2 my-auto"><b>Fecha de fin*</b></div>
+        <div class="p-0 col-8">
+            <div class="d-flex">
+                <input class="w-100 form-control mr-2" type="date" [(ngModel)]="turnoFinDate" 
+                    (change)="assignFinDate($event)" 
+                    ngModel #turnoFinDate="ngModel" name="turnoFinDate" required />
+                <input class="w-100 form-control mr-2" type="time" [min]="currentDate"
+                    [(ngModel)]="turnoFinTime" (change)="assignFinTime($event)" 
+                    ngModel #turnoFinTime="ngModel" name="turnoFinTime" required />
+            </div>
+            <p class="invalid-feedback d-block p-0 m-0"
+                [ngClass]="{'d-block': turnoFinDate.invalid && (turnoFinDate.dirty || turnoFinDate.touched)}">
+                Este campo es requerido
+            </p>
+        </div>
+    </div>
+    <div class="col-2 d-flex align-items-start pt-4">
+        <button class="btn btn-primary m-auto w-100 form-btn" 
+            [disabled]="!selectedMedico || !turnoInicioDate || !turnoFinDate" (click)="crearTurno()">
+            Crear turno
+        </button>
+    </div>          
+</div>
