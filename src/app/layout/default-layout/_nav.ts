@@ -1,5 +1,4 @@
 import { INavData } from '@coreui/angular';
-import { AuthService } from 'src/app/services/auth.service';
 
 export interface INavDataProps extends INavData {
   needValidation?: boolean;
@@ -58,12 +57,6 @@ export const navItems: INavDataProps[] = [
   }
 ];
 
-export function getNavItems(authService: AuthService): INavDataProps[] {
-  return navItems.filter(item => userValidation(authService, item));
-}
-
-function userValidation(authService: AuthService, prop: INavDataProps): boolean {
-  if (!prop.needValidation) return true;
-  const user = authService.getLoggedUser();
-  return user.is_superuser;
+export function getNavItems(): INavDataProps[] {
+  return navItems;
 }

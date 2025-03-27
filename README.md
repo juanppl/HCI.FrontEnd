@@ -1,48 +1,16 @@
 ## Overview
 
-#### Login Screen (/login)
-![Overview of the platform](https://github.com/juanppl/PTI.FrontEnd/blob/master/src/assets/login.png)
+#### Menu
+![Overview of the platform](https://github.com/juanppl/PTI.FrontEnd/blob/master/src/assets/menu.png)
 
-#### Login Screen Validations
-![Overview of the platform](https://github.com/juanppl/PTI.FrontEnd/blob/master/src/assets/login-validation.png)
+#### Pagina pacientes administrativa
+![Overview of the platform](https://github.com/juanppl/PTI.FrontEnd/blob/master/src/assets/pacientes.png)
 
-#### Register Screen (/register)
-![Overview of the platform](https://github.com/juanppl/PTI.FrontEnd/blob/master/src/assets/register.png)
+#### Pagina pacientes formularios
+![Overview of the platform](https://github.com/juanppl/PTI.FrontEnd/blob/master/src/assets/pacientes-form.png)
 
-#### Register Screen Validations
-![Overview of the platform](https://github.com/juanppl/PTI.FrontEnd/blob/master/src/assets/register-validation.png)
-
-#### Initial Dashboard
-![Overview of the platform](https://github.com/juanppl/PTI.FrontEnd/blob/master/src/assets/overview.png)
-
-#### Inventory Table
-![Inventory table](https://github.com/juanppl/PTI.FrontEnd/blob/master/src/assets/inventory-table.png)
-
-#### Create or edit product
-![Inventory table](https://github.com/juanppl/PTI.FrontEnd/blob/master/src/assets/form-products.png)
-
-![Inventory table](https://github.com/juanppl/PTI.FrontEnd/blob/master/src/assets/form-products-resp.png)
-
-#### Create or edit product validations
-![Inventory table](https://github.com/juanppl/PTI.FrontEnd/blob/master/src/assets/form-products-validations.png)
-
-#### Edit profile with validations
-![Inventory table](https://github.com/juanppl/PTI.FrontEnd/blob/master/src/assets/edit-profile.png)
-
-#### Shopping page for users
-![Inventory table](https://github.com/juanppl/PTI.FrontEnd/blob/master/src/assets/products-user.png)
-
-#### Orders from users
-![Inventory table](https://github.com/juanppl/PTI.FrontEnd/blob/master/src/assets/orders.png)
-
-#### Pay Order from user
-![Inventory table](https://github.com/juanppl/PTI.FrontEnd/blob/master/src/assets/pay-order.png)
-
-#### Chatbot Closed
-![Inventory table](https://github.com/juanppl/PTI.FrontEnd/blob/master/src/assets/chat-closed.png)
-
-#### Chatbot open
-![Inventory table](https://github.com/juanppl/PTI.FrontEnd/blob/master/src/assets/chat-opened.png)
+#### Pagina pacientes informacion
+![Overview of the platform](https://github.com/juanppl/PTI.FrontEnd/blob/master/src/assets/pacientes-popup.png)
 
 #### <i>Prerequisites</i>
 
