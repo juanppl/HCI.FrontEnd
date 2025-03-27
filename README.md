@@ -1,16 +1,16 @@
 ## Overview
 
 #### Menu
-![Overview of the platform](https://github.com/juanppl/PTI.FrontEnd/blob/master/src/assets/menu.png)
+![Overview of the platform](https://github.com/juanppl/HCI.FrontEnd/blob/master/src/assets/menu.png)
 
 #### Pagina pacientes administrativa
-![Overview of the platform](https://github.com/juanppl/PTI.FrontEnd/blob/master/src/assets/pacientes.png)
+![Overview of the platform](https://github.com/juanppl/HCI.FrontEnd/blob/master/src/assets/pacientes.png)
 
 #### Pagina pacientes formularios
-![Overview of the platform](https://github.com/juanppl/PTI.FrontEnd/blob/master/src/assets/pacientes-form.png)
+![Overview of the platform](https://github.com/juanppl/HCI.FrontEnd/blob/master/src/assets/pacientes-form.png)
 
 #### Pagina pacientes informacion
-![Overview of the platform](https://github.com/juanppl/PTI.FrontEnd/blob/master/src/assets/pacientes-popup.png)
+![Overview of the platform](https://github.com/juanppl/HCI.FrontEnd/blob/master/src/assets/pacientes-popup.png)
 
 #### <i>Prerequisites</i>
 
