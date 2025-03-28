@@ -35,7 +35,7 @@ export const navItems: INavDataProps[] = [
   },
   {
     title: true,
-    name: 'Autogestión'
+    name: 'Gestión Medica'
   },
   {
     name: 'Citas',
