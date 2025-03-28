@@ -9,8 +9,72 @@
 #### Pagina pacientes formularios
 ![Overview of the platform](https://github.com/juanppl/HCI.FrontEnd/blob/master/src/assets/pacientes-form.png)
 
-#### Pagina pacientes informacion
+#### Pagina pacientes formularios responsive
+![Overview of the platform](https://github.com/juanppl/HCI.FrontEnd/blob/master/src/assets/formulario-responsive.png)
+
+#### Pagina pacientes informacion (Mensaje de exito despues de consumo de api)
 ![Overview of the platform](https://github.com/juanppl/HCI.FrontEnd/blob/master/src/assets/pacientes-popup.png)
+
+#### Pagina medicos administrativa
+![Overview of the platform](https://github.com/juanppl/HCI.FrontEnd/blob/master/src/assets/pagina-medicos.png)
+
+#### Pagina medicos formularios
+![Overview of the platform](https://github.com/juanppl/HCI.FrontEnd/blob/master/src/assets/formulario-medicos.png)
+
+#### Pagina medicos formularios responsive
+![Overview of the platform](https://github.com/juanppl/HCI.FrontEnd/blob/master/src/assets/formulario-medicos-resp.png)
+
+#### Pagina especilidades administrativa
+![Overview of the platform](https://github.com/juanppl/HCI.FrontEnd/blob/master/src/assets/pagina-especialidades.png)
+
+#### Pagina especilidades formularios
+![Overview of the platform](https://github.com/juanppl/HCI.FrontEnd/blob/master/src/assets/formulario-especilidades.png)
+
+#### Pagina especilidades formularios responsive
+![Overview of the platform](https://github.com/juanppl/HCI.FrontEnd/blob/master/src/assets/formulario-especilidades-resp.png)
+
+#### Pagina roles administrativa
+![Overview of the platform](https://github.com/juanppl/HCI.FrontEnd/blob/master/src/assets/pagina-roles.png)
+
+#### Pagina roles formularios
+![Overview of the platform](https://github.com/juanppl/HCI.FrontEnd/blob/master/src/assets/formulario-roles.png)
+
+#### Pagina roles formularios responsive
+![Overview of the platform](https://github.com/juanppl/HCI.FrontEnd/blob/master/src/assets/formulario-roles-resp.png)
+
+#### Pagina citas 
+![Overview of the platform](https://github.com/juanppl/HCI.FrontEnd/blob/master/src/assets/pagina-citas.png)
+
+#### Pagina turnos
+![Overview of the platform](https://github.com/juanppl/HCI.FrontEnd/blob/master/src/assets/pagina-turnos.png)
+
+#### Pagina historico
+![Overview of the platform](https://github.com/juanppl/HCI.FrontEnd/blob/master/src/assets/pagina-historico.png)
+
+
+
+## Reportes Lighthouse
+
+#### Reporte Pagina Pacientes
+![Overview of the platform](https://github.com/juanppl/HCI.FrontEnd/blob/master/src/assets/usabilidad-pag1.png)
+
+#### Reporte Pagina Medicos
+![Overview of the platform](https://github.com/juanppl/HCI.FrontEnd/blob/master/src/assets/usabilidad-pag2.png)
+
+#### Reporte Pagina Especialidades
+![Overview of the platform](https://github.com/juanppl/HCI.FrontEnd/blob/master/src/assets/usabilidad-pag3.png)
+
+#### Reporte Pagina Roles
+![Overview of the platform](https://github.com/juanppl/HCI.FrontEnd/blob/master/src/assets/usabilidad-pag4.png)
+
+#### Reporte Pagina Citas
+![Overview of the platform](https://github.com/juanppl/HCI.FrontEnd/blob/master/src/assets/usabilidad-pag5.png)
+
+#### Reporte Pagina Turnos
+![Overview of the platform](https://github.com/juanppl/HCI.FrontEnd/blob/master/src/assets/usabilidad-pag6.png)
+
+#### Reporte Pagina Historial de usuarios
+![Overview of the platform](https://github.com/juanppl/HCI.FrontEnd/blob/master/src/assets/usabilidad-pag7.png)
 
 #### <i>Prerequisites</i>
 
